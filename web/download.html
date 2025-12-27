@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页下载 - SaveXTube</title>
+    <link rel="stylesheet" href="/web/style.css">
+</head>
+
+<body>
+    <div class="container download-page">
+        <header class="header-compact">
+            <a href="/" class="back-link">← 返回首页</a>
+            <h1>🌐 SaveXTube 网页下载</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="download-panel">
+                <div class="input-section">
+                    <h2>粘贴下载链接</h2>
+                    <p class="hint">支持 YouTube、B站、网易云音乐、Apple Music 等多个平台</p>
+
+                    <form id="downloadForm" class="download-form">
+                        <div class="form-group">
+                            <input type="text" id="urlInput" class="url-input" placeholder="粘贴视频或音乐链接..." required>
+                            <button type="submit" class="btn btn-download" id="downloadBtn">
+                                <span class="btn-text">开始下载</span>
+                                <span class="btn-loader" style="display: none;">
+                                    <span class="spinner"></span>
+                                </span>
+                            </button>
+                        </div>
+
+                        <div class="options-toggle">
+                            <button type="button" id="toggleOptions" class="btn-text-only">
+                                高级选项 ▼
+                            </button>
+                        </div>
+
+                        <div id="advancedOptions" class="advanced-options" style="display: none;">
+                            <div class="option-row">
+                                <label for="quality">视频质量:</label>
+                                <select id="quality" name="quality">
+                                    <option value="best">最佳质量</option>
+                                    <option value="1080p">1080p</option>
+                                    <option value="720p">720p</option>
+                                    <option value="480p">480p</option>
+                                </select>
+                            </div>
+                            <div class="option-row">
+                                <label for="format">格式:</label>
+                                <select id="format" name="format">
+                                    <option value="auto">自动检测</option>
+                                    <option value="mp4">MP4 (视频)</option>
+                                    <option value="mp3">MP3 (仅音频)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="status-section" id="statusSection" style="display: none;">
+                    <h3>当前下载</h3>
+                    <div id="currentTask" class="task-card active-task">
+                        <div class="task-header">
+                            <span class="task-title" id="taskTitle">准备中...</span>
+                            <span class="task-status" id="taskStatus">等待</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressBar" style="width: 0%"></div>
+                        </div>
+                        <div class="task-details">
+                            <span id="taskProgress">0%</span>
+                            <span id="taskSpeed">0 MB/s</span>
+                            <span id="taskETA">--:--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-section" id="errorSection" style="display: none;">
+                    <div class="error-message">
+                        <span class="error-icon">⚠️</span>
+                        <span id="errorText"></span>
+                    </div>
+                </div>
+
+                <div class="success-section" id="successSection" style="display: none;">
+                    <div class="success-message">
+                        <span class="success-icon">✅</span>
+                        <div class="success-content">
+                            <p><strong>下载完成！</strong></p>
+                            <p id="successDetails"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-history">
+                <h3>下载历史</h3>
+                <div id="taskList" class="task-list">
+                    <p class="empty-message">暂无下载记录</p>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <h3>💡 使用提示</h3>
+                <ul>
+                    <li>直接粘贴完整的视频或音乐链接</li>
+                    <li>系统会自动识别链接类型并选择最佳下载方式</li>
+                    <li>下载的文件将保存到服务器配置的目录中</li>
+                    <li>支持多任务并发下载，无需等待前一个任务完成</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 SaveXTube | <a href="/">返回首页</a></p>
+        </footer>
+    </div>
+
+    <script src="/web/app.js"></script>
+</body>
+
+</html>

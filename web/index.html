@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveXTube - 智能多媒体下载工具</title>
+    <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="/web/savextube_logo.png" alt="SaveXTube Logo" class="logo">
+            <h1 class="title">SaveXTube</h1>
+            <p class="subtitle">智能多媒体下载工具</p>
+        </header>
+
+        <main class="main-content">
+            <div class="mode-selector">
+                <div class="mode-card telegram-mode">
+                    <div class="mode-icon">📱</div>
+                    <h2>Telegram 机器人模式</h2>
+                    <p class="mode-description">
+                        通过 Telegram 机器人使用下载功能<br>
+                        支持私密、安全的下载体验
+                    </p>
+                    <div class="features">
+                        <div class="feature">✓ 自动识别链接</div>
+                        <div class="feature">✓ 实时进度推送</div>
+                        <div class="feature">✓ 多任务并发</div>
+                    </div>
+                    <a href="#telegram-guide" class="btn btn-primary">查看使用说明</a>
+                </div>
+
+                <div class="mode-card web-mode">
+                    <div class="mode-icon">🌐</div>
+                    <h2>网页下载模式</h2>
+                    <p class="mode-description">
+                        直接在浏览器中进行下载<br>
+                        无需安装任何客户端
+                    </p>
+                    <div class="features">
+                        <div class="feature">✓ 即开即用</div>
+                        <div class="feature">✓ 可视化操作</div>
+                        <div class="feature">✓ 任务管理</div>
+                    </div>
+                    <a href="/download" class="btn btn-success">立即使用</a>
+                </div>
+            </div>
+
+            <div class="supported-platforms">
+                <h3>支持的平台</h3>
+                <div class="platform-grid">
+                    <div class="platform-item">🎬 YouTube</div>
+                    <div class="platform-item">📺 B站</div>
+                    <div class="platform-item">🎵 网易云音乐</div>
+                    <div class="platform-item">🎶 QQ音乐</div>
+                    <div class="platform-item">🍎 Apple Music</div>
+                    <div class="platform-item">🎸 YouTube Music</div>
+                    <div class="platform-item">🐦 X (Twitter)</div>
+                    <div class="platform-item">📸 Instagram</div>
+                    <div class="platform-item">📱 抖音</div>
+                    <div class="platform-item">⚡ 快手</div>
+                    <div class="platform-item">📕 小红书</div>
+                    <div class="platform-item">💬 Telegram</div>
+                </div>
+            </div>
+
+            <div id="telegram-guide" class="guide-section">
+                <h3>📱 Telegram 机器人使用说明</h3>
+                <div class="guide-content">
+                    <div class="guide-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>找到机器人</h4>
+                            <p>在 Telegram 中搜索您配置的机器人</p>
+                        </div>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>发送链接</h4>
+                            <p>直接发送视频或音乐链接给机器人</p>
+                        </div>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>等待下载</h4>
+                            <p>机器人会自动识别并下载内容到服务器</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-commands">
+                    <h4>常用命令</h4>
+                    <ul>
+                        <li><code>/start</code> - 开始使用</li>
+                        <li><code>/help</code> - 显示帮助</li>
+                        <li><code>/status</code> - 查看系统状态</li>
+                        <li><code>/cancel</code> - 取消当前下载</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 SaveXTube | <a href="https://github.com/savextube/savextube" target="_blank">GitHub</a> | <a href="/setup">Telegram 会话设置</a></p>
+        </footer>
+    </div>
+</body>
+</html>
